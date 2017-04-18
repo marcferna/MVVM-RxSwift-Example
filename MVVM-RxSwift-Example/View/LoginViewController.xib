@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="MVVM_RxSwift_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="W2q-gz-umu" id="vBv-Uj-oq2"/>
+                <outlet property="passwordTextField" destination="7tt-Fc-Emf" id="Bno-w2-vU1"/>
+                <outlet property="usernameTextField" destination="oGz-BO-fpd" id="Z7Z-jR-R7f"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGz-BO-fpd">
+                    <rect key="frame" x="16" y="33" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tt-Fc-Emf">
+                    <rect key="frame" x="16" y="71" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2q-gz-umu">
+                    <rect key="frame" x="168" y="109" width="38" height="30"/>
+                    <state key="normal" title="Login"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="W2q-gz-umu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FmD-SM-Loh"/>
+                <constraint firstItem="7tt-Fc-Emf" firstAttribute="top" secondItem="oGz-BO-fpd" secondAttribute="bottom" constant="8" id="G4u-Hl-o0d"/>
+                <constraint firstAttribute="trailing" secondItem="oGz-BO-fpd" secondAttribute="trailing" constant="16" id="SG5-RU-oKc"/>
+                <constraint firstItem="7tt-Fc-Emf" firstAttribute="leading" secondItem="oGz-BO-fpd" secondAttribute="leading" id="Wzo-XS-fsJ"/>
+                <constraint firstItem="oGz-BO-fpd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="bF7-dd-wWn"/>
+                <constraint firstItem="oGz-BO-fpd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="33" id="bzd-7W-ALP"/>
+                <constraint firstItem="W2q-gz-umu" firstAttribute="top" secondItem="7tt-Fc-Emf" secondAttribute="bottom" constant="8" id="nYi-0b-cgT"/>
+                <constraint firstItem="7tt-Fc-Emf" firstAttribute="trailing" secondItem="oGz-BO-fpd" secondAttribute="trailing" id="xgZ-bB-msu"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

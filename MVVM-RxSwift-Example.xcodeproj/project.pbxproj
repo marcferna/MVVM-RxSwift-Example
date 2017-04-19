@@ -40,7 +40,6 @@
 		490017C91EA48EE800953B90 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		490017CF1EA5F2C000953B90 /* MVVM-RxSwift-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-RxSwift-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		490017D31EA5F2C300953B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		490017DA1EA5F34900953B90 /* MVVM-RxSwift-ExampleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVVM-RxSwift-ExampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		490017DB1EA5F34900953B90 /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
 		5F623A6696A7374D31F58BBF /* Pods_MVVM_RxSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_RxSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8305239990971969EF7E7D35 /* Pods-MVVM-RxSwift-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-RxSwift-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-RxSwift-Example/Pods-MVVM-RxSwift-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				490017DB1EA5F34900953B90 /* LoginViewModelSpec.swift */,
-				490017DA1EA5F34900953B90 /* MVVM-RxSwift-ExampleTests-Bridging-Header.h */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -540,7 +538,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.calibarna.MVVM-RxSwift-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MVVM-RxSwift-ExampleTests/ViewModel/MVVM-RxSwift-ExampleTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM-RxSwift-Example.app/MVVM-RxSwift-Example";
@@ -558,7 +555,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.calibarna.MVVM-RxSwift-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MVVM-RxSwift-ExampleTests/ViewModel/MVVM-RxSwift-ExampleTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM-RxSwift-Example.app/MVVM-RxSwift-Example";
 			};

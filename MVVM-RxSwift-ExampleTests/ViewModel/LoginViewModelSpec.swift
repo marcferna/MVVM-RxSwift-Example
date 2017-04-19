@@ -9,53 +9,73 @@
 import XCTest
 import RxSwift
 import Nimble
+import Quick
 
 @testable import MVVM_RxSwift_Example
 
-class LoginViewModelSpec: XCTestCase {
+class LoginViewModelSpec: QuickSpec {
 
-  var loginViewModel: LoginViewModel!
   var disposeBag: DisposeBag!
 
-  override func setUp() {
-    super.setUp()
-    disposeBag = DisposeBag()
-  }
+  override func spec() {
 
-  override func tearDown() {
-    super.tearDown()
-    disposeBag = nil
-  }
+    beforeSuite {
+      self.disposeBag = DisposeBag()
+    }
 
-  func testIsValid_usernameAndPasswordEmpty() {
-    loginViewModel = LoginViewModel(username: Variable<String>(""), password: Variable<String>(""))
+    afterSuite {
+      self.disposeBag = nil
+    }
 
-    loginViewModel.isValid.subscribe {
-      expect($0.element).to(beFalse())
-    }.addDisposableTo(disposeBag)
-  }
+    describe(".isValid") {
 
-  func testIsValid_usernameFilledAndPasswordEmpty() {
-    loginViewModel = LoginViewModel(username: Variable<String>("my_username"), password: Variable<String>(""))
+      context("when username is empty") {
+        let username = ""
 
-    loginViewModel.isValid.subscribe {
-      expect($0.element).to(beFalse())
-      }.addDisposableTo(disposeBag)
-  }
+        context("when password is empty") {
+          let loginViewModel = LoginViewModel(username: Variable<String>(username), password: Variable<String>(""))
 
-  func testIsValid_usernameEmptyAndPasswordFilled() {
-    loginViewModel = LoginViewModel(username: Variable<String>(""), password: Variable<String>("password"))
+          it("is not valid") {
+            loginViewModel.isValid.subscribe {
+              expect($0.element).to(beFalse())
+            }.addDisposableTo(self.disposeBag)
+          }
+        }
 
-    loginViewModel.isValid.subscribe {
-      expect($0.element).to(beFalse())
-      }.addDisposableTo(disposeBag)
-  }
+        context("when password is not empty") {
+          let loginViewModel = LoginViewModel(username: Variable<String>(username), password: Variable<String>("password"))
 
-  func testIsValid_usernameFilledAndPasswordFilled() {
-    loginViewModel = LoginViewModel(username: Variable<String>("my_username"), password: Variable<String>("password"))
+          it("is not valid") {
+            loginViewModel.isValid.subscribe {
+              expect($0.element).to(beFalse())
+            }.addDisposableTo(self.disposeBag)
+          }
+        }
+      }
 
-    loginViewModel.isValid.subscribe {
-      expect($0.element).to(beTrue())
-      }.addDisposableTo(disposeBag)
+      context("when username is not empty") {
+        let username = "username"
+
+        context("when password is empty") {
+          let loginViewModel = LoginViewModel(username: Variable<String>(username), password: Variable<String>(""))
+
+          it("is not valid") {
+            loginViewModel.isValid.subscribe {
+              expect($0.element).to(beFalse())
+            }.addDisposableTo(self.disposeBag)
+          }
+        }
+
+        context("when password is not empty") {
+          let loginViewModel = LoginViewModel(username: Variable<String>(username), password: Variable<String>("password"))
+
+          it("is valid") {
+            loginViewModel.isValid.subscribe {
+              expect($0.element).to(beTrue())
+            }.addDisposableTo(self.disposeBag)
+          }
+        }
+      }
+    }
   }
 }

@@ -13,7 +13,6 @@ struct LoginViewModel {
   var username = Variable<String>("")
   var password = Variable<String>("")
 
-
   var isValid: Observable<Bool> {
     return Observable.combineLatest(username.asObservable(), password.asObservable()) {
       $0.characters.count > 0 && $1.characters.count > 0

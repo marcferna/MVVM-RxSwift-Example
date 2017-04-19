@@ -8,4 +8,13 @@ target 'MVVM-RxSwift-Example' do
   pod 'RxSwift'
   pod 'RxCocoa'
 
+  target 'MVVM-RxSwift-ExampleTests' do
+    inherit! :search_paths
+
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'RxTest'
+    pod 'RxBlocking'
+  end
+
 end
